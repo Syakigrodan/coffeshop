@@ -23,12 +23,12 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Image</th>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Quantity</th>
-                                            <th>Sub total</th>
-                                            <th>Action</th>
+                                            <th>Gambar</th>
+                                            <th>Produk</th>
+                                            <th>Harga</th>
+                                            <th>Jumlah</th>
+                                            <th>total</th>
+                                            <th>aksi</th>
                                         </tr>
                                     </thead>
                                     @if (empty($cart) || count($cart) == 0)

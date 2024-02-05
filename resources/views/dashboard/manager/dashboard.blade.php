@@ -23,7 +23,7 @@
                                             </div>
                                             <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                                 <h6 class="text-muted font-semibold">
-                                                    transaction in day
+                                                    transaksi hari ini
                                                 </h6>
                                                 <h6 class="font-extrabold mb-0">{{ $total_transaction_today }} | IDR
                                                     {{ number_format($transaction_today, 2, ',', '.') }}</h6>
@@ -43,7 +43,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                                <h6 class="text-muted font-semibold"> transaction in month</h6>
+                                                <h6 class="text-muted font-semibold"> transaksi bulan ini</h6>
                                                 <h6 class="font-extrabold mb-0">{{ $total_transaction_this_month }} | IDR
                                                     {{ number_format($transaction_this_month, 2, ',', '.') }}</h6>
                                             </div>
@@ -62,7 +62,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                                <h6 class="text-muted font-semibold">Category Product</h6>
+                                                <h6 class="text-muted font-semibold">kategori produk</h6>
                                                 <h6 class="font-extrabold mb-0">{{ $total_category_products }}</h6>
                                             </div>
                                         </div>
@@ -80,7 +80,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                                <h6 class="text-muted font-semibold">Total Product</h6>
+                                                <h6 class="text-muted font-semibold">Total produk</h6>
                                                 <h6 class="font-extrabold mb-0">{{ $total_products }}</h6>
                                             </div>
                                         </div>

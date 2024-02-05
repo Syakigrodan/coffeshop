@@ -46,12 +46,12 @@ class CategoryProductController extends Controller
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
             'action' => 'Create Category Product',
-            'description' => 'create category product has been Successfully',
+            'description' => 'membuat kategori produk telah Berhasil',
         ];
 
         ActivityHistory::create($activity);
 
-        return redirect('dashboard/manager/categoryProduct')->with('Success, create category product has been Successfully');
+        return redirect('dashboard/manager/categoryProduct')->with('Success, membuat kategori produk telah Berhasil');
     }
 
     /**
@@ -91,12 +91,12 @@ class CategoryProductController extends Controller
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
             'action' => 'Update Data Category Product',
-            'description' => 'Update Category Product  has been Successfully',
+            'description' => 'mengedit kategori produk telah Berhasil',
         ];
 
         ActivityHistory::create($activity);
 
-        return redirect('/dashboard/manager/categoryProduct')->with('success', 'Update User Data has been Successfully.');
+        return redirect('/dashboard/manager/categoryProduct')->with('success', 'mengedit User Data has been Successfully.');
     }
 
     /**
@@ -112,11 +112,11 @@ class CategoryProductController extends Controller
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
             'action' => 'Delete Data Category Product',
-            'description' => 'Category Product has been Delete Successfully',
+            'description' => 'menghapus kategori produk telah Berhasil',
         ];
 
         ActivityHistory::create($activity);
 
-        return redirect('/dashboard/manager/categoryProduct')->with('success', 'Category Product has been deleted successfully.');
+        return redirect('/dashboard/manager/categoryProduct')->with('success', 'menghapus kategori produk telah Berhasil');
     }
 }

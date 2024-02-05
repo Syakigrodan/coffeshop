@@ -55,12 +55,12 @@ class AdminUserManagementController extends Controller
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
             'action' => 'Create User',
-            'description' => 'Create User Data has been Successfully',
+            'description' => 'Membuat Data Pengguna telah Berhasil',
         ];
 
         ActivityHistory::create($activity);
 
-        return redirect('/dashboard/admin')->with('success', 'Create User Data has been Successfully.');
+        return redirect('/dashboard/admin')->with('success', 'Membuat Data Pengguna telah Berhasil');
     }
 
     /**
@@ -115,12 +115,12 @@ class AdminUserManagementController extends Controller
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
             'action' => 'Update Data User',
-            'description' => 'Update User Data has been Successfully',
+            'description' => 'Pembaruan Data Pengguna telah Berhasil',
         ];
 
         ActivityHistory::create($activity);
 
-        return redirect('/dashboard/admin')->with('success', 'Update User Data has been Successfully.');
+        return redirect('/dashboard/admin')->with('success', 'Pembaruan Data Pengguna telah Berhasil.');
     }
 
     /**
@@ -137,11 +137,11 @@ class AdminUserManagementController extends Controller
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
             'action' => 'Delete Data User',
-            'description' => 'Delete User Data has been Successfully',
+            'description' => 'Hapus Data Pengguna telah Berhasil',
         ];
 
         ActivityHistory::create($activity);
 
-        return redirect('/dashboard/admin')->with('success', 'User data has been deleted.');
+        return redirect('/dashboard/admin')->with('success', 'Hapus Data Pengguna telah Berhasil');
     }
 }

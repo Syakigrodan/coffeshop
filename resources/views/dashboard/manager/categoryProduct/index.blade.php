@@ -19,12 +19,12 @@
                                 </div>
                             @endif
                             <div class="card-header">
-                                <h4>Category Product</h4>
+                                <h4>kategori produk</h4>
                             </div>
                             <div class="d-inline">
                                 <a href="/dashboard/manager/categoryProduct/create" class="btn btn-success mx-4 mb-4">
-                                    <i class="bi bi-plus-circle-fill"></i><span class="font-bold"> Create Category
-                                        Product</span>
+                                    <i class="bi bi-plus-circle-fill"></i><span class="font-bold"> Tambah kategori
+                                        produk</span>
                                 </a>
                             </div>
                             <div class="table">
@@ -33,9 +33,9 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Category Product</th>
-                                                <th>Desciption</th>
-                                                <th>ACTION</th>
+                                                <th>kategori produk</th>
+                                                <th>catatan</th>
+                                                <th>aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>

@@ -6,9 +6,7 @@
             <div class="sidebar-header position-relative">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="logo">
-                        <a href="/dashboard/manager"><img src="{{ asset('back-end/assets/compiled/svg/logo.svg') }}"
-                                alt="Logo" srcset="">
-                        </a>
+                        <a href="/dashboard/manajer" class="brand">coffe</a>
                     </div>
                     <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -58,17 +56,17 @@
                         class="sidebar-item has-sub {{ Request::is('dashboard/manager/categoryProduct*') || Request::is('dashboard/manager/products') ? 'active' : '' }}">
                         <a href="menu" class="sidebar-link">
                             <i class="bi bi-stack"></i>
-                            <span>Management Product</span>
+                            <span>Manajemen produk</span>
                         </a>
                         <ul class="submenu">
                             <li
                                 class="submenu-item {{ Request::is('dashboard/manager/categoryProduct*') ? 'active' : '' }}">
-                                <a href="/dashboard/manager/categoryProduct" class="submenu-link">Category
-                                    Product</a>
+                                <a href="/dashboard/manager/categoryProduct" class="submenu-link">kategori
+                                    produk</a>
                             </li>
                             <li
                                 class="submenu-item {{ Request::is('dashboard/manager/products') ? 'active' : '' }}">
-                                <a href="/dashboard/manager/products" class="submenu-link">Products</a>
+                                <a href="/dashboard/manager/products" class="submenu-link">produk</a>
                             </li>
                         </ul>
                     </li>
@@ -76,13 +74,13 @@
                         class="sidebar-item {{ Request::is('dashboard/manager/transactionHistory*') ? 'active' : '' }}">
                         <a href=/dashboard/manager/transactionHistory class='sidebar-link'>
                             <i class="bi bi-file-earmark-medical-fill"></i>
-                            <span>Transaction History</span>
+                            <span>Transaksi History</span>
                         </a>
                     </li>
                     <li class="sidebar-item {{ Request::is('dashboard/manager/activity') ? 'active' : '' }}">
                         <a href="/dashboard/manager/activity" class='sidebar-link'>
                             <i class="bi bi-file-earmark-medical-fill"></i>
-                            <span>Activity History</span>
+                            <span>Aktivitas History</span>
                         </a>
                     </li>
                 </ul>
@@ -96,9 +94,7 @@
             <div class="sidebar-header position-relative">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="logo">
-                        <a href="/dashboard/admin"><img src="{{ asset('back-end/assets/compiled/svg/logo.svg') }}"
-                                alt="Logo" srcset="">
-                        </a>
+                        <a href="/dashboard/admin" class="brand">coffe</a>
                     </div>
                     <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -141,13 +137,13 @@
                     <li class="sidebar-item {{ Request::is('dashboard/admin*') ? 'active' : '' }}">
                         <a href="/dashboard/admin" class='sidebar-link'>
                             <i class="bi bi-grid-fill"></i>
-                            <span>User Management</span>
+                            <span>User Login</span>
                         </a>
                     </li>
                     <li class="sidebar-item {{ Request::is('dashboard/activity*') ? 'active' : '' }}">
                         <a href="{{ route('admin-activity') }}" class='sidebar-link'>
                             <i class="bi bi-file-earmark-medical-fill"></i>
-                            <span>Activity History</span>
+                            <span>Log Aktivitas</span>
                         </a>
                     </li>
                 </ul>
@@ -161,9 +157,7 @@
                 <div class="sidebar-header position-relative">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
-                            <a href="/dashboard/cashier"><img src="{{ asset('back-end/assets/compiled/svg/logo.svg') }}"
-                                    alt="Logo" srcset="">
-                            </a>
+                            <a href="/dashboard/Cashier" class="brand">coffe</a>
                         </div>
                         <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -207,19 +201,19 @@
                         <li class="sidebar-item {{ Request::is('dashboard/cashier') ? 'active' : '' }}">
                             <a href="/dashboard/cashier" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
-                                <span>Product's</span>
+                                <span>produk</span>
                             </a>
                         </li>
                         <li class="sidebar-item {{ Request::is('dashboard/cashier/cart') ? 'active' : '' }}">
                             <a href="/dashboard/cashier/cart" class='sidebar-link'>
                                 <i class="bi bi-basket3-fill"></i>
-                                <span>Cart</span>
+                                <span>keranjang</span>
                             </a>
                         </li>
                         <li class="sidebar-item {{ Request::is('dashboard/cashier/myTransaction') ? 'active' : '' }}">
                             <a href="/dashboard/cashier/myTransaction" class='sidebar-link'>
                                 <i class="bi bi-wallet-fill"></i>
-                                <span>My Transaction</span>
+                                <span>transaksi saya</span>
                             </a>
                         </li>
                     </ul>

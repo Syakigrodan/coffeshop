@@ -76,11 +76,11 @@
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>Time</th>
-                                                    <th>Fullname</th>
+                                                    <th>jam</th>
+                                                    <th>full nama</th>
                                                     <th>Username</th>
-                                                    <th>Position</th>
-                                                    <th>Total Price</th>
+                                                    <th>Jabatan</th>
+                                                    <th>Total Harga</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

@@ -26,7 +26,7 @@
                                     <div class="d-inline">
                                         <a href="/dashboard/manager/products/create" class="btn btn-success mx-4 mb-4">
                                             <i class="bi bi-plus-circle-fill"></i><span class="font-bold">
-                                                Create Product</span>
+                                                Tambah produk</span>
                                         </a>
                                     </div>
                                     <div class="table">
@@ -35,11 +35,11 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>Image</th>
-                                                        <th>Product</th>
-                                                        <th>Description</th>
-                                                        <th>Price</th>
-                                                        <th>Action</th>
+                                                        <th>Gambar</th>
+                                                        <th>produk</th>
+                                                        <th>Catatan</th>
+                                                        <th>Harga</th>
+                                                        <th>Aksi</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>

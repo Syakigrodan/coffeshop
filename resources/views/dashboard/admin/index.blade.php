@@ -12,11 +12,11 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Users Management</h4>
+                                <h4>Form User</h4>
                             </div>
                             <div class="d-inline">
                                 <a href="/dashboard/admin/userManagement/create" class="btn btn-success mx-4 mb-4">
-                                    <i class="bi bi-plus-circle-fill"></i><span class="font-bold"> Add User</span>
+                                    <i class="bi bi-plus-circle-fill"></i><span class="font-bold"> Tambah User</span>
                                 </a>
                             </div>
                             <div class="table">
@@ -25,10 +25,10 @@
                                         <thead>
                                             <tr>
                                                 <th>NO</th>
-                                                <th>FULLNAME</th>
-                                                <th>USERNAME</th>
-                                                <th>JABATAN</th>
-                                                <th>ACTION</th>
+                                                <th>Full Nama</th>
+                                                <th>Usernam</th>
+                                                <th>Jabatan</th>
+                                                <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>

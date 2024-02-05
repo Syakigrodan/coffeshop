@@ -22,10 +22,10 @@
                                                 <thead>
                                                     <tr>
                                                         <th>Time</th>
-                                                        <th>Fullname</th>
+                                                        <th>full nama</th>
                                                         <th>Jabatan</th>
-                                                        <th>Action</th>
-                                                        <th>Desciption</th>
+                                                        <th>aksi</th>
+                                                        <th>catatan</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>

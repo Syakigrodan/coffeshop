@@ -33,7 +33,7 @@ class AuthController extends Controller
                 ];
 
                 ActivityHistory::create($activity);
-                return redirect()->intended('/dashboard/manager')->with('toastr-success', 'Login Successfully');
+                return redirect()->intended('/dashboard/manager')->with('toastr-success', 'Login sukses');
             } elseif (Auth()->user()->position_id == 2) {
                 $request->session()->regenerate();
                 $user = Auth::user();
@@ -42,11 +42,11 @@ class AuthController extends Controller
                     'fullname' => $user->fullname,
                     'position' => optional($user->position)->position_name,
                     'action' => 'Login',
-                    'description' => 'Login Successfully',
+                    'description' => 'Login sukses',
                 ];
 
                 ActivityHistory::create($activity);
-                return redirect()->intended('/dashboard/admin')->with('toastr-success', 'Login Successfully');
+                return redirect()->intended('/dashboard/admin')->with('toastr-success', 'Login sukses');
             } elseif (Auth()->user()->position_id == 3) {
                 $request->session()->regenerate();
                 $user = Auth::user();
@@ -55,11 +55,11 @@ class AuthController extends Controller
                     'fullname' => $user->fullname,
                     'position' => optional($user->position)->position_name,
                     'action' => 'Login',
-                    'description' => 'Login Successfully',
+                    'description' => 'Login sukses',
                 ];
 
                 ActivityHistory::create($activity);
-                return redirect()->intended('/dashboard/cashier')->with('toastr-success', 'Login Successfully');
+                return redirect()->intended('/dashboard/cashier')->with('toastr-success', 'Login Sukses');
             }
         }
         return redirect()

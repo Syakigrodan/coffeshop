@@ -41,9 +41,9 @@
                                             <div class="row mt-4">
                                                 @foreach ($products as $product)
                                                     <div class="col-sm-12 col-xs-12 col-md-4 col-lg-3 mb-4">
-                                                        <div class="card h-80">
-                                                            <img class="card-img-top img-fluid"
-                                                                src="https://source.unsplash.com/150x150/?{{ $product->image }}"
+                                                        <div class="card py-5">
+                                                            <img class="img-fluid w-50"
+                                                                src="{{ Storage::url($product->image) }}"
                                                                 alt="">
                                                             <div class="card-img-overlay"
                                                                 style="background-color: rgba(0,0,0,0.5);">
@@ -56,8 +56,7 @@
                                                                     {{ $product->description }}
                                                                 </p>
                                                                 <a href="/dashboard/cashier/addToCart/{{ $product->id }}"
-                                                                    class="btn btn-sm btn-block btn-outline-secondary text-white">Add
-                                                                    to cart</a>
+                                                                    class="btn btn-sm btn-block btn-outline-secondary text-white">Tambah ke keranjang</a>
                                                             </div>
                                                         </div>
                                                     </div>

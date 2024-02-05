@@ -58,12 +58,12 @@ class ProductsController extends Controller
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
             'action' => 'Delete Data Product',
-            'description' => 'Product has been Delete Successfully',
+            'description' => 'Produk telah berhasil Tambah',
         ];
 
         ActivityHistory::create($activity);
 
-        return redirect('/dashboard/manager/products')->with('success', 'Product created successfully!');
+        return redirect('/dashboard/manager/products')->with('success', 'Produk berhasil di tambah!');
     }
 
     /**
@@ -117,11 +117,11 @@ class ProductsController extends Controller
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
             'action' => 'Delete Data Product',
-            'description' => 'Product has been Delete Successfully',
+            'description' => 'Produk telah berhasil di edit',
         ];
 
         ActivityHistory::create($activity);
-        return redirect('/dashboard/manager/products')->with('success', 'Product updated successfully!');
+        return redirect('/dashboard/manager/products')->with('success', 'Produk telah berhasil di edit!');
     }
 
     /**
@@ -137,10 +137,10 @@ class ProductsController extends Controller
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
             'action' => 'Delete Data Category Product',
-            'description' => 'Product has been Delete Successfully',
+            'description' => 'Produk berhasil di hapus',
         ];
 
         ActivityHistory::create($activity);
-        return redirect('/dashboard/manager/products')->with('success', 'Product has been deleted successfully.');
+        return redirect('/dashboard/manager/products')->with('success', 'produk berhasil di hapus.');
     }
 }

@@ -5,7 +5,7 @@
         @include('layouts.components.navbar')
         <div id="main">
             <div class="page-heading">
-                <h3>{{ $title }}</h3>
+                <h3>Form Keranjang</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -53,7 +53,7 @@
                                                         @if (!empty($val['image_url']))
                                                             <img src="{{ $val['image_url'] }}" alt="Product Image">
                                                         @else
-                                                            No Image
+                                                            No Gambar
                                                         @endif
                                                     </td>
                                                     <td class="text-bold-500">{{ $val['product_name'] }}</td>
@@ -67,7 +67,7 @@
                                                 </tr>
                                             @endforeach
                                             <tr>
-                                                <th colspan="5" class="text-end">Grand Total :</th>
+                                                <th colspan="5" class="text-end">Total Akhir :</th>
                                                 <th>Rp {{ number_format($grandtotal, 2, ',', '.') }}</th>
                                                 <th>
                                                     <button type="button" class="btn btn-primary btn-sm"
@@ -92,7 +92,7 @@
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <p class="fw-normal">Are You Sure Want To
+                                                            <p class="fw-normal">Apakah Anda Yakin Ingin
                                                                 Checkout
                                                                 ?
                                                             </p>

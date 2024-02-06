@@ -5,7 +5,7 @@
         @include('layouts.components.navbar')
         <div id="main">
             <div class="page-heading">
-                <h3>{{ $title }}</h3>
+                <h3>Log Aktivitas</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -14,7 +14,7 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>{{ $title }}
+                                        <h4>Aktivitas User
                                     </div>
                                     <div class="table">
                                         <div class="table-responsive px-4">

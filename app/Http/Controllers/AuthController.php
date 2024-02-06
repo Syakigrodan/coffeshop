@@ -29,7 +29,7 @@ class AuthController extends Controller
                     'fullname' => $user->fullname,
                     'position' => optional($user->position)->position_name,
                     'action' => 'Login',
-                    'description' => 'Login Successfully',
+                    'description' => 'Login Sukses',
                 ];
 
                 ActivityHistory::create($activity);

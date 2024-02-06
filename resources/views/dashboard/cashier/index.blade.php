@@ -5,7 +5,7 @@
         @include('layouts.components.navbar')
         <div id="main">
             <div class="page-heading">
-                <h3>{{ $title }}</h3>
+                <h3>Order Produk</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -41,9 +41,9 @@
                                             <div class="row mt-4">
                                                 @foreach ($products as $product)
                                                     <div class="col-sm-12 col-xs-12 col-md-4 col-lg-3 mb-4">
-                                                        <div class="card py-5">
-                                                            <img class="img-fluid w-50"
-                                                                src="{{ Storage::url($product->image) }}"
+                                                        <div class="card">
+                                                            <img class="card-img-top"
+                                                                src="{{ asset('storage/' . $product->image) }}"
                                                                 alt="">
                                                             <div class="card-img-overlay"
                                                                 style="background-color: rgba(0,0,0,0.5);">

@@ -66,7 +66,7 @@ class CashierController extends Controller
 
         return redirect()
             ->back()
-            ->with('success', 'Product removed from cart.');
+            ->with('success', 'Produk dikeluarkan dari keranjang.');
     }
 
     public function addTransaction(Product $product)
@@ -102,13 +102,13 @@ class CashierController extends Controller
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
             'action' => 'Transaction',
-            'description' => 'Transaction success',
+            'description' => 'Transaksi sukses',
         ];
         ActivityHistory::create($activity);
 
         session()->forget('cart');
 
-        return redirect('dashboard/cashier/cart')->with('success', 'Transaction successfully.');
+        return redirect('dashboard/cashier/cart')->with('success', 'Transaksi sukses.');
     }
 
     public function myTransaction()
@@ -138,6 +138,6 @@ class CashierController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('login')->with('logout', 'You have successfully logged out.');
+        return redirect()->route('login')->with('logout', 'Anda telah berhasil logout.');
     }
 }

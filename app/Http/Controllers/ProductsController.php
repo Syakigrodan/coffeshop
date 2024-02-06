@@ -57,13 +57,13 @@ class ProductsController extends Controller
         $activity = [
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
-            'action' => 'Delete Data Product',
-            'description' => 'Produk telah berhasil Tambah',
+            'action' => 'create Data Product',
+            'description' => 'Produk telah berhasil Ditambah',
         ];
 
         ActivityHistory::create($activity);
 
-        return redirect('/dashboard/manager/products')->with('success', 'Produk berhasil di tambah!');
+        return redirect('/dashboard/manager/products')->with('success', 'Produk berhasil di Ditambah!');
     }
 
     /**

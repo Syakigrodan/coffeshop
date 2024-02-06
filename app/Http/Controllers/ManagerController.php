@@ -33,7 +33,7 @@ class ManagerController extends Controller
             'fullname' => $user->fullname,
             'position' => optional($user->position)->position_name,
             'action' => 'Logout',
-            'description' => 'Logout Successfully',
+            'description' => 'Logout sukses',
         ];
 
         ActivityHistory::create($activity);
@@ -42,7 +42,7 @@ class ManagerController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('login')->with('logout', 'You have successfully logged out.');
+        return redirect()->route('login')->with('logout', 'Anda telah berhasil logout.');
     }
 
     public function activity()

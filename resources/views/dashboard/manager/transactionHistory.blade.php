@@ -5,7 +5,7 @@
         @include('layouts.components.navbar')
         <div id="main">
             <div class="page-heading">
-                <h3>{{ $title }}</h3>
+                <h3>History Transaksi</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -14,7 +14,7 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col-9">
-                                        <h4>{{ $title }}</h4>
+                                        <h4>History Transaksi</h4>
                                     </div>
                                     <div class="col-3">
                                         <form action="{{ route('manager-transactionSearch') }}" method="get">

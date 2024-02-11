@@ -56,6 +56,8 @@
                                                             No Gambar
                                                         @endif
                                                     </td>
+
+
                                                     <td class="text-bold-500">{{ $val['product_name'] }}</td>
                                                     <td>Rp {{ number_format($val['price'], 2, ',', '.') }}</td>
                                                     <td>{{ $val['quantity'] }}</td>

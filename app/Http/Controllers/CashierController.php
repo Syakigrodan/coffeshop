@@ -34,6 +34,12 @@ class CashierController extends Controller
     {
         $cart = session()->get('cart');
 
+        // Ambil URL gambar dari model Product dan tambahkan ke setiap item dalam keranjang
+        foreach ($cart as $key => $item) {
+            $product = Product::find($key);
+            $cart[$key]['image_url'] = $product->image_url; // Misalkan image_url adalah properti yang menyimpan URL gambar produk
+        }
+
         return view('dashboard.cashier.cart.cart', [
             'title' => "Cart",
             'cart' => $cart,
@@ -48,6 +54,7 @@ class CashierController extends Controller
             "product_name" => $product->product_name,
             "price" => $product->price,
             "quantity" => 1,
+            "image_url" => asset('storage/' . $product->image), // Menyimpan URL gambar ke dalam session
         ];
 
         session()->put('cart', $cart);

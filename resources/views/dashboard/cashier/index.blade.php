@@ -32,7 +32,7 @@
                                                                 class="form-control" placeholder="Search Product">
                                                             <div class="input-group-append">
                                                                 <button type="submit"
-                                                                    class="btn btn-primary">Search produk</button>
+                                                                    class="btn btn-primary">cari produk</button>
                                                             </div>
                                                         </div>
                                                     </form>

@@ -24,7 +24,7 @@
                                     <table class="table table-hover mb-0">
                                         <thead>
                                             <tr>
-                                                <th>NO</th>
+                                                <th>No</th>
                                                 <th>Full Nama</th>
                                                 <th>Username</th>
                                                 <th>Jabatan</th>

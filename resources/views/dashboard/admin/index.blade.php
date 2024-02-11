@@ -26,7 +26,7 @@
                                             <tr>
                                                 <th>NO</th>
                                                 <th>Full Nama</th>
-                                                <th>Usernam</th>
+                                                <th>Username</th>
                                                 <th>Jabatan</th>
                                                 <th>Aksi</th>
                                             </tr>

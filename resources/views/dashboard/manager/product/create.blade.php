@@ -30,7 +30,7 @@
                                                     style="max-height: 150px; overflow:hidden">
                                             </div>
                                             <input class="form-control @error('image') is-invalid @enderror" type="file"
-                                                id="image" name="image" onchange="preview()">
+                                                id="image" name="image" onchange="preview()" required autofocus>
                                             <div class="invalid-feedback">
                                                 @error('image')
                                                     {{ $message }}

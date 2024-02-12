@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\ActivityHistory;
 use App\Models\DetailTransaction;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class CashierController extends Controller
 {

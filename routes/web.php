@@ -20,6 +20,7 @@ use App\Http\Controllers\CashierController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::middleware(['guest'])->group(function () {
     Route::controller(AuthController::class)->group(function () {
         Route::get('/', 'login')->name('login');
@@ -44,8 +45,8 @@ Route::middleware(['IsManager'])->group(function () {
 Route::middleware(['IsAdmin'])->group(function () {
     Route::controller(AdminController::class)->group(function () {
         Route::get('/dashboard/admin', 'index');
-        Route::post('/dashboard/admin/logout','logout')->name('admin-logout');
-        Route::get('/dashboard/activity','activity')->name('admin-activity');
+        Route::post('/dashboard/admin/logout', 'logout')->name('admin-logout');
+        Route::get('/dashboard/activity', 'activity')->name('admin-activity');
     });
     Route::resource('/dashboard/admin/userManagement', AdminUserManagementController::class);
 });
@@ -53,6 +54,7 @@ Route::middleware(['IsAdmin'])->group(function () {
 Route::middleware(['IsCashier'])->group(function () {
     Route::controller(CashierController::class)->group(function () {
         Route::get('/dashboard/cashier', 'index');
+        Route::get('/export-pdf', 'exportpdf');
         Route::get('/dashboard/cashier/cart', 'cart');
         Route::get('/dashboard/cashier/addToCart/{product:id}', 'addToCart');
         Route::get('/dashboard/cashier/deleteCart/{product:id}', 'deleteCart');

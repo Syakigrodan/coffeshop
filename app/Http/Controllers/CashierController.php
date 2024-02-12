@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Models\ActivityHistory;
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\DetailTransaction;
 use Illuminate\Support\Facades\Auth;
 
@@ -34,6 +35,19 @@ class CashierController extends Controller
     {
         $cart = session()->get('cart');
 
+        // Tambahkan pengecekan untuk memastikan $cart tidak null
+        if ($cart !== null) {
+            // Ambil data produk yang terdapat dalam keranjang untuk mendapatkan URL gambar
+            $products = Product::whereIn('id', array_keys($cart))->get();
+
+            // Gabungkan data produk dengan data keranjang
+            foreach ($products as $product) {
+                if (isset($cart[$product->id])) {
+                    $cart[$product->id]['image_url'] = $product->image_url;
+                }
+            }
+        }
+
         return view('dashboard.cashier.cart.cart', [
             'title' => "Cart",
             'cart' => $cart,
@@ -44,10 +58,14 @@ class CashierController extends Controller
     {
         $cart = session()->get('cart', []);
 
+        // Ambil URL gambar produk dari model Product
+        $image_url = $product->image_url;
+
         $cart[$product->id] = [
             "product_name" => $product->product_name,
             "price" => $product->price,
             "quantity" => 1,
+            "image_url" => $image_url, // Setel URL gambar produk di sini
         ];
 
         session()->put('cart', $cart);
@@ -140,5 +158,11 @@ class CashierController extends Controller
         $request->session()->regenerateToken();
         return redirect()->route('login')->with('logout', 'Anda telah berhasil logout.');
     }
-}
 
+    public function exportpdf()
+    {
+        $myTransactions = Transaction::all();
+        $pdf = Pdf::loadView('dashboard.manager.pdf.exportTransactions', ['export' => $myTransactions]); // Perbaiki nama variabel yang dikirimkan ke view
+        return $pdf->download('export-transaksi-.pdf');
+    }
+}

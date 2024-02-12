@@ -53,7 +53,7 @@
                                                         @if (!empty($val['image_url']))
                                                             <img src="{{ $val['image_url'] }}" alt="Product Image">
                                                         @else
-                                                            No Gambar
+                                                            <img src="{{ asset('path_to_placeholder_image') }}" >
                                                         @endif
                                                     </td>
                                                     <td class="text-bold-500">{{ $val['product_name'] }}</td>

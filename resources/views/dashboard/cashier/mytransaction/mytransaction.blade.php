@@ -34,9 +34,13 @@
                                                 <button type="submit" id="submit_button" class="btn btn-primary btn-sm">
                                                     <i class="bi bi-funnel-fill"></i>
                                                 </button>
+                                                <div>
+                                                    <a href="/export-pdf"  class="btn btn-sm btn-success">CETAK</a>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
+
                                     <div class="table-responsive mt-4">
                                         <table class="table table-hover">
                                             <thead>

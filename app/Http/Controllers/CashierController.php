@@ -165,4 +165,5 @@ class CashierController extends Controller
         $pdf = Pdf::loadView('dashboard.manager.pdf.exportTransactions', ['export' => $myTransactions]); // Perbaiki nama variabel yang dikirimkan ke view
         return $pdf->download('export-transaksi-.pdf');
     }
+
 }

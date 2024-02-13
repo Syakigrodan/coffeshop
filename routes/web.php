@@ -55,6 +55,7 @@ Route::middleware(['IsCashier'])->group(function () {
     Route::controller(CashierController::class)->group(function () {
         Route::get('/dashboard/cashier', 'index');
         Route::get('/export-pdf', 'exportpdf');
+        Route::post('/dashboard/cashier/export-filtered-transactions','exportFilteredTransactions')->name('cashier.exportFilteredTransactions');
         Route::get('/dashboard/cashier/cart', 'cart');
         Route::get('/dashboard/cashier/addToCart/{product:id}', 'addToCart');
         Route::get('/dashboard/cashier/deleteCart/{product:id}', 'deleteCart');

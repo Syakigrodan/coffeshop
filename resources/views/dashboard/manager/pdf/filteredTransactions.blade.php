@@ -34,7 +34,6 @@
 </head>
 
 <body>
-    <h2 style="text-align: center;">Hasil Laporan Transaksi</h2>
     <table>
         <thead>
             <tr>

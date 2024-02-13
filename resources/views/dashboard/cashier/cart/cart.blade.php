@@ -23,7 +23,6 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Gambar</th>
                                             <th>Produk</th>
                                             <th>Harga</th>
                                             <th>Jumlah</th>
@@ -49,13 +48,7 @@
                                                 @endphp
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>
-                                                        @if (!empty($val['image_url']))
-                                                            <img src="{{ $val['image_url'] }}" alt="Product Image">
-                                                        @else
-                                                            <img src="{{ asset('path_to_placeholder_image') }}" >
-                                                        @endif
-                                                    </td>
+
                                                     <td class="text-bold-500">{{ $val['product_name'] }}</td>
                                                     <td>Rp {{ number_format($val['price'], 2, ',', '.') }}</td>
                                                     <td>{{ $val['quantity'] }}</td>
@@ -67,7 +60,7 @@
                                                 </tr>
                                             @endforeach
                                             <tr>
-                                                <th colspan="5" class="text-end">Total Akhir :</th>
+                                                <th colspan="4" class="text-end">Total Akhir :</th>
                                                 <th>Rp {{ number_format($grandtotal, 2, ',', '.') }}</th>
                                                 <th>
                                                     <button type="button" class="btn btn-primary btn-sm"

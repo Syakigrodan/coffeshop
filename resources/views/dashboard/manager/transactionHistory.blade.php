@@ -76,7 +76,7 @@
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>jam</th>
+                                                    <th>waktu</th>
                                                     <th>full nama</th>
                                                     <th>Username</th>
                                                     <th>Jabatan</th>
@@ -85,23 +85,22 @@
                                             </thead>
                                             <tbody>
                                                 @if ($transactions->count() > 0)
-                                                    @foreach ($transactions as $t)
-                                                        <tr>
-                                                            <td class="text-bold-500">{{ $t->created_at }}</td>
-                                                            <td>{{ $t->user->fullname }}</td>
-                                                            <td>{{ $t->user->username }}</td>
-                                                            <td>{{ $t->user->position->position_name }}</td>
-                                                            <td>{{ 'Rp. ' . number_format($t->total_price, 2, ',', '.') }}
-                                                            </td>
-                                                        </tr>
-                                                    @endforeach
-                                                @else
-                                                    <tr>
-                                                        <td colspan="5" class="text-center font-bold">
-                                                            Activity History is empty
-                                                        </td>
-                                                    </tr>
-                                                @endif
+                                                @foreach ($transactions as $t)
+                                                <tr>
+                                                    <td class="text-bold-500">{{ $t->created_at }}</td>
+                                                    <td>{{ optional($t->user)->fullname }}</td>
+                                                    <td>{{ optional($t->user)->username }}</td>
+                                                    <td>{{ optional(optional($t->user)->position)->position_name }}</td>
+                                                    <td>{{ 'Rp. ' . number_format($t->total_price, 2, ',', '.') }}</td>
+                                                </tr>
+                                            @endforeach
+                                            @else
+                                                <tr>
+                                                    <td colspan="5" class="text-center font-bold">
+                                                        Activity History is empty
+                                                    </td>
+                                                </tr>
+                                            @endif
                                             </tbody>
                                         </table>
                                         {{ $transactions->links() }}

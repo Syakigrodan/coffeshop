@@ -49,9 +49,9 @@
             @foreach ($export as $t)
             <tr>
                 <td>{{ $t->created_at }}</td>
-                <td>{{ $t->user->fullname }}</td>
-                <td>{{ $t->user->username }}</td>
-                <td>{{ $t->user->position->position_name }}</td>
+                <td>{{ optional($t->user)->fullname }}</td>
+                <td>{{ optional($t->user)->username }}</td>
+                <td>{{ optional(optional($t->user)->position)->position_name }}</td>
                 <td>{{ 'Rp. ' . number_format($t->total_price, 2, ',', '.') }}</td>
             </tr>
             @endforeach

@@ -55,11 +55,11 @@ class ManagerController extends Controller
 
     public function transactionHistory()
     {
+        // dd(Transaction::with('user.position')->get());
         return view('dashboard.manager.transactionHistory', [
             'title' => 'Transaction History',
-            'transactions' => Transaction::with('user')
-                ->latest()
-                ->paginate(15),
+            'transactions' => Transaction::where('user_id', Auth::user()->id)->paginate(15),
+
         ]);
     }
 
